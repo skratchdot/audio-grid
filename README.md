@@ -7,7 +7,7 @@ tool by [Andre Michelle](http://andre-michelle.com/).
 [![Audio Grid][2]][1]
 
   [1]: http://skratchdot.github.io/audio-grid/index.html
-  [2]: http://skratchdot.github.io/audio-grid/img/preview.png (Audio Grid)
+  [2]: http://skratchdot.github.io/audio-grid/img/preview.jpg (Audio Grid)
 
 
 ## Audio Grid Links
