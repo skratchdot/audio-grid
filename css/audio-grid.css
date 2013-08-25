@@ -1,0 +1,192 @@
+html, body {
+	height: 100%;
+	background-image: -ms-radial-gradient(center, circle farthest-corner, #ffffff 0%, #fbfefe 100%);
+	background-image: -moz-radial-gradient(center, circle farthest-corner, #ffffff 0%, #fbfefe 100%);
+	background-image: -o-radial-gradient(center, circle farthest-corner, #ffffff 0%, #fbfefe 100%);
+	background-image: -webkit-gradient(radial, center center, 0, center center, 497, color-stop(0, #ffffff), color-stop(1, #fbfefe));
+	background-image: -webkit-radial-gradient(center, circle farthest-corner, #ffffff 0%, #fbfefe 100%);
+	background-image: radial-gradient(circle farthest-corner at center, #ffffff 0%, #fbfefe 100%);
+}
+
+#header, #footer, svg, .hero-unit, #adshr-canvas, #waveform-canvas, .option-box {
+	background: #e6e6e6 url(../img/gradient_squares.png) repeat center center;
+}
+
+#settings {
+	margin: 0;
+}
+
+#settings-content {
+	background: #fff;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 20px;
+	height: 495px;
+	margin-bottom: 10px;
+}
+
+.tab-pane h4 {
+	margin-top: 0px;
+	border-bottom:1px solid #333;
+}
+
+#scale-filter, #soundfont-filter {
+	width: 90%;
+}
+
+#audio-type-display, .scale-display {
+	font-style: italic;
+}
+
+#grid-data, #adshr-canvas, #waveform-canvas, .option-box {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #333;
+	border-radius: 5px;
+}
+
+#grid-data {
+	height: 500px;
+	cursor: pointer;
+}
+
+#adshr-canvas {
+	height: 200px;
+	margin-top: 36px;
+}
+
+#waveform-canvas {
+	height: 200px;
+}
+
+.option-box {
+	height: 405px;
+	margin-top: 20px;
+	overflow: auto;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background: #fdfdfd;
+}
+
+:focus {
+	outline: 0 !important;
+}
+
+body, svg, .btn {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -45px;
+}
+
+#header {
+	border-bottom:1px solid #999;
+}
+
+#header h1 a.home-link {
+	color: #333;
+	text-transform: uppercase;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+}
+
+#header h1 small a {
+	font-size: 20px;
+	color: #c80000;
+}
+
+#header-author {
+	text-decoration: none;
+}
+
+#header-author:hover span {
+	text-decoration: underline;
+}
+
+#header .breadcrumb {
+	background: transparent;
+	margin: 6px 0 5px 0;
+	padding: 0;
+	text-align: right;
+}
+
+#social-header {
+	float: right;
+	display: block;
+}
+
+#footer-spacer, #footer {
+	position:relative;
+	height: 45px;
+}
+
+#footer {
+	bottom:0;
+	left:0;
+}
+
+#footer .footer-built-with {
+	margin: 10px;
+	float: left;
+}
+
+#footer .footer-copy {
+	margin: 10px;
+	float: right;
+}
+
+#footer .footer-copy img {
+	width: 16px;
+	height: 16px;
+}
+
+#footer hr {
+	padding: 0;
+	margin: 0;
+	border-color: #999;
+	border-style: inset;
+}
+
+#home {
+	margin-top:15px;
+}
+
+#player-buttons {
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+#waveform .btn-group {
+	width: 100%;
+	white-space: normal;
+}
+
+#waveform .btn-group .btn {
+	width: 50%;
+	margin: 0;
+	border-radius: 0px;
+}
+
+#action-buttons {
+	margin: 15px 0 10px 0;
+}
+
+#about .hero-unit {
+	margin-top: 40px;
+	text-align: center;
+}
+
+#about .hero-unit h1 {
+	text-transform: uppercase;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+}

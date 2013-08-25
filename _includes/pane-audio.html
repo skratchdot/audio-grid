@@ -1,0 +1,62 @@
+<div class="tab-pane" id="audio">
+
+	<h4>Audio Info:</h4>
+	<div>
+		<strong>Volume:</strong>
+		<em id="volume-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div id="volume-container"></div>
+	<div>
+		<strong>Tempo:</strong>
+		<em id="tempo-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div id="tempo-container"></div>
+	<div>
+		<strong>Center Note:</strong>
+		<em id="center-note-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div id="center-note-container"></div>
+	<div>
+		<strong>Data Size:</strong>
+		<em id="data-size-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div id="data-size-container"></div>
+	<div>
+		<strong>Audio Type:</strong>
+		<a id="audio-type-display" class="pull-right" href="javascript:void(0);">&nbsp;</a>
+	</div>
+	<div id="audio-type-container" class="text-center">
+		<div class="btn-group" data-toggle="buttons-radio">
+			<button data-audio-type="waveform" type="button" class="btn btn-mini active">Waveform</button>
+			<button data-audio-type="soundfont" type="button" class="btn btn-mini">SoundFont</button>
+		</div>
+	</div>
+	<div>
+		<strong>Scale:</strong>
+		<a id="scale-link" class="pull-right scale-display" href="javascript:void(0);">&nbsp;</a>
+	</div>
+
+	<h4 style="margin-top:40px;">Delay Info:</h4>
+	<div id="delay-container" class="text-center">
+		<div class="btn-group" data-toggle="buttons-radio">
+			<button data-delay-enabled="false" type="button" class="btn btn-mini">Off</button>
+			<button data-delay-enabled="true" type="button" class="btn btn-mini active">On</button>
+		</div>
+	</div>
+	<div>
+		<strong>Delay Time:</strong>
+		<em id="delay-time-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div id="delay-time-container" data-delay="time"></div>
+	<div>
+		<strong>Delay Feedback:</strong>
+		<em id="delay-feedback-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div id="delay-feedback-container" data-delay="feedback"></div>
+	<div>
+		<strong>Delay Mix:</strong>
+		<em id="delay-mix-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div id="delay-mix-container" data-delay="mix"></div>
+
+</div>

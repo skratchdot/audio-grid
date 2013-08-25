@@ -1,0 +1,75 @@
+---
+layout: default
+---
+{% include header.html %}
+<section class="container" id="home">
+	<div class="row">
+		<div class="span7">
+			<div id="player-buttons">
+				<span data-action="goToFirst" class="btn btn-mini btn-success">
+					<i class="icon-white icon-fast-backward"></i>
+				</span>
+				<span data-action="reverse" class="btn btn-mini btn-success">
+					<i class="icon-white icon-step-backward"></i>
+					Reverse
+				</span>
+				<span data-action="stop" class="btn btn-mini btn-success">
+					<i class="icon-white icon-stop"></i>
+					Stop
+				</span>
+				<span data-action="play" class="btn btn-mini btn-success">
+					Play
+					<i class="icon-white icon-step-forward"></i>
+				</span>
+				<span data-action="goToLast" class="btn btn-mini btn-success">
+					<i class="icon-white icon-fast-forward"></i>
+				</span>
+			</div>
+			<div id="grid">
+				<svg id="grid-data">
+					<g id="group-data"></g>
+					<g id="group-play"></g>
+					<g id="group-line"></g>
+				</svg>
+			</div>
+			<div id="action-buttons">
+				<div class="pull-left">
+					<span data-action="clear" class="btn btn-mini btn-primary">
+						<i class="icon-white icon-remove"></i>
+						Clear Data
+					</span>
+					<span data-action="randomize" class="btn btn-mini btn-primary">
+						<i class="icon-white icon-random"></i>
+						Randomize Data
+					</span>
+				</div>
+				<div class="pull-right">
+					<span data-action="export" class="btn btn-mini btn-info hide">
+						Export As Midi
+						<i class="icon-white icon-download-alt"></i>
+					</span>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="span5">
+			<ul id="settings" class="nav nav-tabs">
+				<li><a href="#audio" data-toggle="tab">Audio</a></li>
+				<li data-audio-type="waveform"><a href="#adshr" data-toggle="tab">Env</a></li>
+				<li data-audio-type="waveform"><a href="#waveform" data-toggle="tab">Waveform</a></li>
+				<li data-audio-type="soundfont" class=""><a href="#soundfont" data-toggle="tab">SoundFont</a></li>
+				<li><a href="#scale" data-toggle="tab">Scale</a></li>
+				<li class="hide"><a href="#saved" data-toggle="tab">Save</a></li>
+			</ul>
+			<div id="settings-content" class="tab-content">
+				{% include pane-audio.html %}
+				{% include pane-adshr.html %}
+				{% include pane-waveform.html %}
+				{% include pane-soundfont.html %}
+				{% include pane-scale.html %}
+				{% include pane-save.html %}
+			</div>
+		</div>
+	</div>
+</section>
+{% include footer.html %}
