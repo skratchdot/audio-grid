@@ -6,13 +6,13 @@ tool by [Andre Michelle](http://andre-michelle.com/).
 
 [![Audio Grid][2]][1]
 
-  [1]: http://skratchdot.github.io/audio-grid/index.html
-  [2]: http://skratchdot.github.io/audio-grid/img/preview.jpg (Audio Grid)
+  [1]: http://projects.skratchdot.com/audio-grid/index.html
+  [2]: http://projects.skratchdot.com/audio-grid/img/preview.jpg (Audio Grid)
 
 
 ## Audio Grid Links
 
-- [Live Demo](http://skratchdot.github.io/audio-grid/index.html)
+- [Live Demo](http://projects.skratchdot.com/audio-grid/index.html)
 
 - [Project Page / Comments](http://skratchdot.com/projects/audio-grid/)
 
