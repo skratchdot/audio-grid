@@ -23,7 +23,7 @@ tool by [Andre Michelle](http://andre-michelle.com/).
 
 - [timbre.js](http://mohayonao.github.io/timbre.js/)
 
-- [subcollider.js](http://mohayonao.github.io/subcollider.js/)
+- [subcollider.js](https://github.com/mohayonao/subcollider)
 
 - [d3](http://d3js.org/)
 
