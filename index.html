@@ -1,7 +1,44 @@
----
-layout: default
----
-{% include header.html %}
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Audio Grid by skratchdot</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="audio, tone matrix, tenori-on, monome, timbre.js, subcollider.js" />
+	<meta name="author" content="skratchdot.com" />
+	<link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
+	<!-- styles -->
+	<link href="dist/styles.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="wrapper">
+		<!-- header -->
+		<header id="header">
+			<div class="container">
+				<div class="row">
+					<div id="header-title" class="span6">
+						<h1>
+							<a href="index.html" class="home-link">Audio Grid</a>
+							<small>
+								<a id="header-author" href="http://skratchdot.com/">
+									<span>by skratchdot</span><sub>✪</sub>
+								</a>
+							</small>
+						</h1>
+					</div>
+					<div id="header-nav" class="span6">
+						<ul class="breadcrumb">
+							<li><a href="index.html">Home</a> <span class="divider">/</span></li>
+							<li><a href="about.html">About</a> <span class="divider">/</span></li>
+							<li><a href="https://github.com/skratchdot/audio-grid/" target="_blank">Source</a></li>
+						</ul>
+						<div id="social-header">
+							<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=300&amp;pubid=ra-4f95a18f2f5627c9"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 <section class="container" id="home">
 	<div class="row">
 		<div class="span7">
@@ -62,14 +99,201 @@ layout: default
 				<li class="hide"><a href="#saved" data-toggle="tab">Save</a></li>
 			</ul>
 			<div id="settings-content" class="tab-content">
-				{% include pane-audio.html %}
-				{% include pane-adshr.html %}
-				{% include pane-waveform.html %}
-				{% include pane-soundfont.html %}
-				{% include pane-scale.html %}
-				{% include pane-save.html %}
+				<div class="tab-pane" id="audio">
+
+	<h4>Audio Info:</h4>
+	<div>
+		<strong>Volume:</strong>
+		<em id="volume-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div id="volume-container"></div>
+	<div>
+		<strong>Tempo:</strong>
+		<em id="tempo-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div id="tempo-container"></div>
+	<div>
+		<strong>Center Note:</strong>
+		<em id="center-note-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div id="center-note-container"></div>
+	<div>
+		<strong>Data Size:</strong>
+		<em id="data-size-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div id="data-size-container"></div>
+	<div>
+		<strong>Audio Type:</strong>
+		<a id="audio-type-display" class="pull-right" href="javascript:void(0);">&nbsp;</a>
+	</div>
+	<div id="audio-type-container" class="text-center">
+		<div class="btn-group" data-toggle="buttons-radio">
+			<button data-audio-type="waveform" type="button" class="btn btn-mini active">Waveform</button>
+			<button data-audio-type="soundfont" type="button" class="btn btn-mini">SoundFont</button>
+		</div>
+	</div>
+	<div>
+		<strong>Scale:</strong>
+		<a id="scale-link" class="pull-right scale-display" href="javascript:void(0);">&nbsp;</a>
+	</div>
+
+	<h4 style="margin-top:40px;">Delay Info:</h4>
+	<div id="delay-container" class="text-center">
+		<div class="btn-group" data-toggle="buttons-radio">
+			<button data-delay-enabled="false" type="button" class="btn btn-mini">Off</button>
+			<button data-delay-enabled="true" type="button" class="btn btn-mini active">On</button>
+		</div>
+	</div>
+	<div>
+		<strong>Delay Time:</strong>
+		<em id="delay-time-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div id="delay-time-container" data-delay="time"></div>
+	<div>
+		<strong>Delay Feedback:</strong>
+		<em id="delay-feedback-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div id="delay-feedback-container" data-delay="feedback"></div>
+	<div>
+		<strong>Delay Mix:</strong>
+		<em id="delay-mix-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div id="delay-mix-container" data-delay="mix"></div>
+
+</div>
+				<div class="tab-pane" id="adshr">
+	<h4>Envelope Settings:</h4>	
+	<div>
+		<strong>Attack:</strong>
+		<em id="adshr-attack-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div data-adshr="a" id="adshr-attack-container"></div>
+
+	<div>
+		<strong>Decay:</strong>
+		<em id="adshr-decay-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div data-adshr="d" id="adshr-decay-container"></div>
+
+	<div>
+		<strong>Sustain:</strong>
+		<em id="adshr-sustain-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div data-adshr="s" id="adshr-sustain-container"></div>
+
+	<div>
+		<strong>Hold:</strong>
+		<em id="adshr-hold-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div data-adshr="h" id="adshr-hold-container"></div>
+
+	<div>
+		<strong>Release:</strong>
+		<em id="adshr-release-display" class="pull-right">&nbsp;</em>
+	</div>
+	<div data-adshr="r" id="adshr-release-container"></div>
+	<canvas id="adshr-canvas"></canvas>
+</div>
+				<div class="tab-pane" id="waveform">
+	<h4>Choose Waveform:</h4>	
+	<div class="btn-group" data-toggle="buttons-radio">
+	</div>
+	<h4 style="margin-top: 40px;">Selected Waveform:</h4>	
+	<canvas id="waveform-canvas"></canvas>
+</div>
+				<div class="tab-pane" id="soundfont">
+	<div style="margin-bottom:5px;">
+	    <strong class="pull-left">Soundfont:</strong>
+	    <em id="soundfont-display" class="pull-right">&nbsp;</em>
+	    <div class="clearfix"></div>
+	</div>
+	<input id="soundfont-filter" data-list-id="soundfont-options" type="text" class="input-medium search-query" placeholder="Filter Soundfont Names" />
+	<ul id="soundfont-options" class="nav nav-pills nav-stacked option-box">
+	</ul>
+</div>
+				<div class="tab-pane" id="scale">
+	<div style="margin-bottom:5px;">
+	    <strong class="pull-left">Scale:</strong>
+	    <em class="pull-right scale-display">&nbsp;</em>
+	    <div class="clearfix"></div>
+	</div>
+	<input id="scale-filter" data-list-id="scale-options" type="text" class="input-medium search-query" placeholder="Filter Scale Names" />
+	<ul id="scale-options" class="nav nav-pills nav-stacked option-box">
+	</ul>
+</div>
+				<div class="tab-pane" id="save">
+	<h3>Coming Soon.</h3>
+	<h4>Soon you will be able to save and load settings from this panel.</h4>
+</div>
 			</div>
 		</div>
 	</div>
 </section>
-{% include footer.html %}
+		<div id="footer-spacer">&nbsp;</div>
+	</div>
+	<!-- footer -->
+	<footer id="footer">
+		<hr />
+		<div class="container">
+			<!-- built with -->
+			<div class="footer-built-with">
+				built with:
+				<a target="_blank" href="http://mohayonao.github.io/timbre.js/">timbre</a>,
+				<a target="_blank" href="http://mohayonao.github.io/subcollider.js/">subcollider</a>,
+				<a target="_blank" href="http://d3js.org/">d3</a>,
+				<a target="_blank" href="http://jquery.com/">jquery</a>,
+				<a target="_blank" href="http://twitter.github.com/bootstrap/">bootstrap</a>,
+				<a target="_blank" href="http://www.eyecon.ro/bootstrap-slider/">bootstrap-slider</a>, and
+				<a target="_blank" href="https://github.com/skratchdot/audio-grid/#built-with">others</a>
+			</div>
+			<!-- copyright -->
+			<div class="footer-copy">
+				&copy; 2013 <a class="footer-icon" href="http://skratchdot.com/">
+					skratchdot
+					<img alt="skratchdot" src="img/favicon.ico" />
+				</a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- include scripts -->
+	<script type="text/javascript" charset="utf-8" src="js/lib/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/bootstrap-slider.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/timbre.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/audio-jsonp.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/timbre.mp3_decode.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/timbre.soundfont.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/subcollider.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/d3.v3.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/jsmidgen.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/Blob.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/lib/FileSaver.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="dist/grid.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function () {
+			A.Grid.init();
+		});
+	</script>
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-10768188-1', 'skratchdot.com');
+		ga('require', 'displayfeatures');
+		ga('send', 'pageview');
+	</script>
+	<script type="text/javascript">
+		var addthis_config = {"data_track_addressbar":true};
+		var addthis_share = {url:'http://skratchdot.com/projects/audio-grid/'};
+		$(document).ready(function () {
+			$.ajaxSetup({ cache: true });
+			$.getScript('http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f95a18f2f5627c9&domready=1&async=1', function () {
+				addthis.init();
+			});
+		});
+	</script>
+</body>
+</html>
