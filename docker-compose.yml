@@ -1,0 +1,9 @@
+version: '3.6'
+services:
+  audio-grid:
+    build:
+      context: .
+    environment:
+      - PORT=80
+    ports:
+      - 8000:80
