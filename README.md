@@ -39,6 +39,12 @@ tool by [Andre Michelle](http://andre-michelle.com/).
 
 - [FileSaver.js](https://github.com/eligrey/FileSaver.js)
 
+## Build & run
+
+```
+docker-compose build
+docker-compose up
+```
 
 ## See Also / Credits
 
