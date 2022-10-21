@@ -18,7 +18,11 @@
 		}
 	],
 	"scripts": {
-		"test": "grunt nodeunit"
+		"build": "grunt build",
+		"serve": "grunt server",
+		"start": "grunt build && grunt server",
+		"test": "grunt nodeunit",
+		"watch": "grunt watch"
 	},
 	"devDependencies": {
 		"grunt": "^1.5.3",
