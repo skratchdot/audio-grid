@@ -215,7 +215,9 @@
 		$('#player-buttons .btn').on('click', function () {
 			var action = $(this).data('action');
 			if (Player.hasOwnProperty(action) && typeof Player[action] === 'function') {
-				Player[action]();
+				timbre.fn._audioContext.resume().then(function () {
+					Player[action]();
+				});
 			}
 		});
 
